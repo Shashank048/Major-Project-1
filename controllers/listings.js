@@ -1,5 +1,5 @@
 const { REPL_MODE_SLOPPY } = require("repl");
-const listing = require("../models/listing");
+const Listing = require("../models/listing");
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const mapToken = process.env.MAP_ACCESS_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
