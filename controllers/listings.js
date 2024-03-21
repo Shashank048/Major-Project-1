@@ -1,8 +1,9 @@
 const { REPL_MODE_SLOPPY } = require("repl");
 const listing = require("../models/listing");
-const mbxgeocoding = require('mapbox/mapbox-sdk/services/geocoding');
-const mapToken = process.env.MAP_TOKEN;
-const geocodingClient = mbxGeocoding({ accessToken: My_ACCESS_TOKEN});
+const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+const mapToken = process.env.MAP_ACCESS_TOKEN;
+const geocodingClient = mbxGeocoding({ accessToken: mapToken });
+
 
 module.exports.index = async (req, res) => {
     const allListings = await Listing.find({});
