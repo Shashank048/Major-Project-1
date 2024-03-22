@@ -50,7 +50,7 @@ const sessionOption = {
   cookie: { 
     expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
     maxAge: 7 * 24 * 60 * 60 * 1000,
-    httpOnly: true,   
+    httpOnly: true,    
    }
 };
 
@@ -62,9 +62,11 @@ app.use(session(sessionOption));
 app.use(flash());
 
 
-app.use(passpoert.initialize());
+
+
+app.use(passport.initialize());
 app.use(passport.session());
-passport.use(new localStrategy(User.authenticate()) );
+passport.use(new localstrategy(User.authenticate()) );
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -72,7 +74,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next)=>{
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");  
-  res.kocals.currUser = req.user;
+  res.locals.currUser = req.user;
   next();
 });
 
