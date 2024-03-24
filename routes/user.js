@@ -4,7 +4,7 @@ const router = express.Router();
 const passport = require("passport");
 const { saveRedirectUrl } = require("../middleware");
 
-const userController = require("../controllers/users.js");
+const userController = require("../controllers/user.js");
 
 
 router.route("/signup")
