@@ -17,9 +17,7 @@ const localstrategy = require("passport-local");
 const User = require("./models/user.js");
 
 
-const listingsRouter = require("./routes/listing.js");
-const reviewsRouter = require("./routes/review.js");
-const userRouter = require("./routes/user.js");
+
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
 
@@ -78,15 +76,10 @@ app.use((req,res,next)=>{
   next();
 });
 
-//const validateReview = (req,res,next) => {
-//  let {error} = reviewSchema.validate(req.body);
-//  if(error) {
-//    let errMsg = error.details.map((el) => el.message).join(",");
-//    throw new Expre
-//  }else{
-//    next();
-//  }
-//}
+
+const listingsRouter = require("./routes/listing.js");
+const reviewsRouter = require("./routes/review.js");
+const userRouter = require("./routes/user.js");
 
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter );
