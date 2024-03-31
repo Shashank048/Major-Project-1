@@ -30,7 +30,7 @@ router.route("/login")
 
 //router.post("/login",saveRedirectUrl, passport.authenticate("local",{
 //    failureRedirect: "/login",
-//    failureflash: true,    
+//    failureflash: true,       
 //}),
 //userController.login
 //);
