@@ -4,25 +4,38 @@
 
   <style>
     #filters {
-      display: flex;
-      flex-wrap: wrap;  
-      align-items: center;
+      display: flex !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
     }
 
-    .filter {
+    .filter-container {
+      display: flex !important;
+      justify-content: space-around !important;
+    }
+
+    .filter-box {
       text-align: center;
-      margin-right: 2rem;
-      margin-top: 2rem;
+      margin-right: 1.7rem;
       opacity: 0.7;
+      transition: 0.3s;
     }
 
-    .filter:hover {
+    .filter-box button {
+      border: none;
+      outline: none;
+      font-size: 12px;
+      background-color: transparent;
+      white-space: nowrap;
+    }
+
+    .filter-box i {
+      font-size: 24px !important;
+    }
+
+    .filter-box:hover {
       opacity: 1;
       cursor: pointer;
-    }
-
-    .filter p {
-      font-size: 0.8rem;
     }
 
     .tax-info {
@@ -30,73 +43,156 @@
     }
 
     .tax-toggle {
+      color: black;
       border: 1px solid black;
-      border-radius: 1rem;
-      height: 3.25rem;
-      padding: 1rem;
-      margin-left: 2rem;
-      display: flex;
-      align-items: center;
+      height: 42px;
+      /* margin-top: 4px; */
+      padding: 7px;
+      border-radius: 13px;
     }
+
+    #flexSwitchCheckDefault {
+      color: black;
+      border: 1px solid black;
+    }
+
   </style>
   <!-- <h3>All Listings</h3>-->
   <!-- <form method="GET" action="/listings/new">
       <button>Create New Listing</button>
     </form> -->
+    <div id="filters" class="mt-4">
+      <div class="filter-container">
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="Trending">Trending</button>
+        </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-water-ladder"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="Pool">Pools</button>
+          </form>
+        </div>
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-couch"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="Rooms">Rooms</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-tree-city"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="Tropical">Tropiclas</button>
+          </form>
+        </div>
 
-  <div id="filters">
-    <div class="filter">
-      <div><i class="fa-solid fa-fire"></i></div>
-      <p>Trending</p>
-    </div>
-    <div id="filters">
-      <div class="filter">
-        <div><i class="fa-solid fa-mountain-city"></i></div>
-        <p>Iconic Cities</p>
-      </div>
-      <div id="filters">
-        <div class="filter">
-          <div><i class="fa-solid fa-mountain-city"></i></div>
-          <p>Mountains</p>
-        </div>
-        <div id="filters">
-          <div class="filter">
-            <div><i class="fa-brands fa-fort-awesome"></i></div>
-            <p>Castles</p>
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </button>
           </div>
+          <button name="btnValue" value="Beachfront">Beachfront</button>
+          </form>
         </div>
-        <div id="filters">
-          <div class="filter">
-            <div><i class="fa-solid fa-person-swimming"></i></div>
-            <p>Amazing Pools</p>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-igloo"></i>
+          </button>
           </div>
-          <div id="filters">
-            <div class="filter">
-              <div><i class="fa-solid fa-campground"></i></div>
-              <p>Camping</p>
-            </div>
-            <div id="filters">
-              <div class="filter">
-                <div><i class="fa-solid fa-cow"></i></div>
-                <p>Farms</p>
-              </div>
-            </div>
-            <div id="filters">
-              <div class="filter">
-                <div><i class="fa-solid fa-snowflake"></i></div>
-                <p>Arctic</p>
-              </div>
-              <div id="filters">
-                <div class="filter">
-                  <div><i class="fa-solid fa-landmark-dome"></i></div>
-                  <p>Domes</p>
-                </div>
-                <div id="filters">
-                  <div class="filter">
-                    <div><i class="fa-solid fa-sailboat"></i></div>
-                    <p>Boats</p>
-                  </div>
-                  <div class="tax-toggle">
+          <button name="btnValue" value="Cave">Caves</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-hotel"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="Hotel">Hotels</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-landmark-dome"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="historical">Historical</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-gopuram"></i>
+          </button>
+          </div>
+          <button name="btnValue" value="Tower">Towers</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-ship"></i>
+            </button>
+          </div>
+          <button name="btnValue" value="Houseboat">Houseboats</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-mug-hot"></i>
+            </button>
+          </div>
+          <button name="btnValue" value="food">Brackfast</button>
+          </form>
+        </div>
+  
+        <div class="filter-box">
+          <form action="/listings/catagory" method="post">
+          <div>
+            <button name="btnValue" value="Beachfront">
+            <i class="fa-solid fa-cable-car"></i>
+            </button>
+          </div>
+          <button name="btnValue" value="location">Tourism</button>
+          </form>
+        </div>
                     <div class="form-check-reverse form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                       <label class="form-check-label" for="flexSwitchCheckDefault">Display total after Taxes</label>
