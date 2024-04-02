@@ -1,3 +1,4 @@
+
 const User = require("../models/user");
 
 module.exports.renderSignupForm = (req ,res)=>{
@@ -9,7 +10,7 @@ module.exports.signup = async(req,res)=>{
     try{
         let{username,email,password} = req.body;
         const newUser = new User({email, username});
-        const registeredUser = await User.register(newUser, paasword);
+        const registeredUser = await User.register(newUser, password);
         console.log(registeredUser);
         req.login(registeredUser,(err) =>{
             if(err) {
@@ -30,7 +31,7 @@ module.exports.renderLoginForm = (req,res)=>{
 };
 
 module.exports.login = async(req,res)=>{
-    res.flash("success","Welcome back Wanderlust!");
+   // res.flash("success","Welcome back Wanderlust!");
     let redirectUrl = res.locals.redirectUrl || "/listings";
     res.redirect(redirectUrl);
 };
