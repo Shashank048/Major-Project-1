@@ -36,12 +36,14 @@ body{
     text-decoration: underline;
 }
 
-.f-info-links,.f-info-socials,f-info-brand{
+.f-info-socials,f-info-brand,.f-info-links{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -3rem;
 }
+
 
 .f-info-socials i{
    margin-right: 1rem;
@@ -55,7 +57,7 @@ body{
     background-color: #ebebeb;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
+    align-items: centre;
 }
 
 /* Cards */
