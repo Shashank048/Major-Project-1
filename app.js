@@ -1,3 +1,4 @@
+
 if(process.env.NODE_ENV != "production"){
   require('dotenv').config();
 }
@@ -32,6 +33,7 @@ main()
 async function main() {
   await mongoose.connect(MONGO_URL);
 }
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
