@@ -146,15 +146,14 @@
     <div id="filters" class="mt-4">
       <div class="filter-container">
        <div class="filter-box">
-      <form action="/listings/catagory" method="post">
-       <div>
-          <a href="/listings" class="trending-icon">
-             <i class="fa-solid fa-fire-flame-curved"></i>
-          </a>
-       </div>
-      </form>
-            <button onclick="window.location.href='/listings'">Trending</button>
-       </div>
+  <form action="/listings" method="get">
+    <button>
+      <i class="fa-solid fa-fire-flame-curved"></i><br />
+      Trending
+    </button>
+  </form>
+</div>
+
         
          <div class="filter-box">
           <form action="/listings/catagory" method="post">
@@ -186,7 +185,7 @@
             <i class="fa-solid fa-tree-city"></i>
           </button>
           </div>
-          <button name="btnValue" value="Tropical">Tropiclas</button>
+          <button name="btnValue" value="Tropical">Tropical</button>
           </form>
         </div>
 
@@ -263,7 +262,7 @@
             <i class="fa-solid fa-mug-hot"></i>
             </button>
           </div>
-          <button name="btnValue" value="food">Brackfast</button>
+          <button name="btnValue" value="food">Breakfast</button>
           </form>
         </div>
   
