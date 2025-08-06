@@ -1,15 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderlust Footer</title>
 
-<footer>
-    <div class="f-info">
-        <div class="f-info-socials">
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    footer {
+      width: 100vw;
+      margin-left: -50vw;
+      left: 50%;
+      right: 50%;
+      position: relative;
+      background-color: #f7f7f7;
+      padding: 40px 0 20px;
+      box-sizing: border-box;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .footer-bottom a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom-left,
+    .footer-bottom-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-bottom-right i {
+      margin-left: 8px;
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .footer-bottom-right i:hover {
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .footer-columns {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Full-width footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h4>Support</h4>
+          <a href="#">Help Centre</a>
+          <a href="#">AirCover</a>
+          <a href="#">Anti-discrimination</a>
+          <a href="#">Disability support</a>
+          <a href="#">Cancellation options</a>
+          <a href="#">Report neighbourhood concern</a>
         </div>
-        <div class="f-info-brand">&copy;Wanderlust Private limited</div>
-        <div class="f-info-links">
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
+
+        <div class="footer-column">
+          <h4>Hosting</h4>
+          <a href="#">Wanderlust your home</a>
+          <a href="#">Airbnb your experience</a>
+          <a href="#">Airbnb your service</a>
+          <a href="#">AirCover for Hosts</a>
+          <a href="#">Hosting resources</a>
+          <a href="#">Community forum</a>
+          <a href="#">Hosting responsibly</a>
+          <a href="#">Join a free Hosting class</a>
+          <a href="#">Find a co-host</a>
         </div>
+
+        <div class="footer-column">
+          <h4>Wanderlust</h4>
+          <a href="#">2025 Summer Release</a>
+          <a href="#">Newsroom</a>
+          <a href="#">Careers</a>
+          <a href="#">Investors</a>
+          <a href="#">Emergency stays</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          © 2025 Wanderlust, Inc.
+          <a href="#">Privacy</a> ·
+          <a href="#">Terms</a> ·
+          <a href="#">Sitemap</a> ·
+          <a href="#">Company details</a>
+        </div>
+
+        <div class="footer-bottom-right">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+      </div>
     </div>
-</footer>
+  </footer>
+
+</body>
+</html>
