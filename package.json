@@ -5,13 +5,9 @@
     "name": "majorproject",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
-<<<<<<< HEAD
-        "starts": "node app.js",
-=======
         "start": "node app.js",
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -36,11 +32,7 @@
         "nodemon": "^3.1.0",
         "passport": "^0.7.0",
         "passport-local": "^1.0.0",
-<<<<<<< HEAD
         "passport-local-mongoose": "^8.0.0",
         "vite": "^5.2.13"
-=======
-        "passport-local-mongoose": "^8.0.0"
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
     }
 }
