@@ -28,8 +28,6 @@ const poolSchema = new Schema({
     },
 });
 
-<<<<<<< HEAD
+
 module.exports = mongoose.model("Pool", poolSchema);
-=======
-module.exports = mongoose.model("Pool", poolSchema);
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
+

@@ -7,11 +7,11 @@ module.exports.renderSignupForm = (req ,res)=>{
 };
 
 
-<<<<<<< HEAD
-module.exports.signup = async(req,res)=>{
-=======
+
+
+
 module.exports.signup = async(req,res,next)=>{
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
+
     try{
         let{username,email,password} = req.body;
         const newUser = new User({email, username});
@@ -46,11 +46,9 @@ module.exports.logout = (req,res,next)=>{
         if(err) {
             return next(err);
         }
-<<<<<<< HEAD
+
         req.flash(("success","you are logged out!"));
-=======
-        req.flash("success","you are logged out!");
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
+
         res.redirect("/listings");
     })
 };

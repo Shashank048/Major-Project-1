@@ -51,7 +51,6 @@ module.exports.validateReview = (req,res,next) => {
         }
       };
 
-<<<<<<< HEAD
 // module.exports.isReviewAuthor = async(req,res,next)=>{
  //       let { id,reviewId } = req.params;
  //       let review = await Review.findById(reviewId);
@@ -81,7 +80,7 @@ module.exports.isReviewAuthor = async (req, res, next) => {
 
   next();
 };
-=======
+
  module.exports.isReviewAuthor = async(req,res,next)=>{
         let { id,reviewId } = req.params;
         let review = await Review.findById(reviewId);
@@ -91,4 +90,4 @@ module.exports.isReviewAuthor = async (req, res, next) => {
         }
         next();
     };  
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
+
