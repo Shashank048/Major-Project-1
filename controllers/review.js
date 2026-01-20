@@ -18,6 +18,7 @@ module.exports.createReview = async(req,res) =>{
     res.redirect(`/listings/${listing._id}`);
   };
 
+<<<<<<< HEAD
 //module.exports.destroyReview = async (req,res) => {
 //    let { id , reviewId } = req.params;
   
@@ -41,3 +42,18 @@ module.exports.destroyReview = async (req, res) => {
   res.redirect(`/listings/${id}`);
 };
 
+=======
+module.exports.destroyReview = async (req,res) => {
+     try {
+        let { id, reviewId } = req.params;
+        await Listing.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
+        await Review.findByIdAndDelete(reviewId);
+        req.flash("success", "Review deleted successfully");
+        res.redirect(`/listings/${id}`); // Correctly formatted redirect
+    } catch (error) {
+        console.error("Error deleting review:", error);
+        req.flash("error", "Could not delete review.");
+        res.redirect(`/listings/${id}`); // Redirect back to the listing on error
+     }
+   };
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9

@@ -51,6 +51,7 @@ module.exports.validateReview = (req,res,next) => {
         }
       };
 
+<<<<<<< HEAD
 // module.exports.isReviewAuthor = async(req,res,next)=>{
  //       let { id,reviewId } = req.params;
  //       let review = await Review.findById(reviewId);
@@ -80,3 +81,14 @@ module.exports.isReviewAuthor = async (req, res, next) => {
 
   next();
 };
+=======
+ module.exports.isReviewAuthor = async(req,res,next)=>{
+        let { id,reviewId } = req.params;
+        let review = await Review.findById(reviewId);
+        if(review.author.equals(res.locals.currUser._id)){
+            req.flash("error","You are not the Author of this Review");
+          return  res.redirect(`/listings/${id}`);
+        }
+        next();
+    };  
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9

@@ -66,4 +66,8 @@ router.get("/dashboard", async (req, res) => {
     res.render("dashboard", { listings, pools });
 });
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9

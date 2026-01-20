@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 
  // Old code 
 
@@ -60,3 +61,30 @@ module.exports = {
   cloudinary,
   storage
 };
+=======
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage} = require('multer-storage-cloudinary');
+
+cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.CLOUD_API_KEY,
+    api_secret: process.env.CLOUD_API_SECRET
+})
+
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: async (req, file) => {
+      // async code using `req` and `file`
+      // ...
+      return {
+        folder: 'wanderlust_DEV', 
+        allowerdFormats: ["png","jpg","jpeg"]
+      };
+    },
+  });
+
+module.exports = {
+    cloudinary,
+    storage,
+}
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9

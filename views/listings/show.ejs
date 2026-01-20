@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 
 <% layout("/layouts/boilerplate") %>
 <script>
@@ -102,6 +103,8 @@
 </div> 
 
  -->
+=======
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
 
  <% layout("/layouts/boilerplate") %>
 <script>
@@ -119,11 +122,15 @@
       <div class="card mb-4 listing-card">
         <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" />
         <div class="card-body" style="font-size: 0.9rem;">
+<<<<<<< HEAD
           <!-- <p class="card-text">Owned by <i><%= listing.owner.username %></i></p> -->
            <p class="card-text">
               Owned by <i><%= listing.owner?.username || "Unknown User" %></i>
           </p>
 
+=======
+          <p class="card-text">Owned by <i><%= listing.owner.username %></i></p>
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
           <p class="card-text"><%= listing.description %></p>
            <%
   const gstRate = 0.18;
@@ -202,6 +209,7 @@
   </div>
 <% } %>
 
+<<<<<<< HEAD
 <form action="/payment/<%= listing._id %>" method="GET">
   <button class="btn btn-success mt-3">
     Pay ₹<%= totalWithGst.toFixed(2).toLocaleString("en-IN") %>
@@ -209,6 +217,8 @@
 </form>
 
 
+=======
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
 
 
     <div class="col-md-8 mb-5 mt-4">

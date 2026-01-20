@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 const sampleListings = [
   {
     title: "Cozy Beachfront Cottage", 
+=======
+
+const sampleListings = [
+  {
+    title: "Cozy Beachfront Cottage",
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
     description:
       "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
     image: {
@@ -69,7 +76,11 @@ const sampleListings = [
     },
     price: 2000,
     location: "Cancun",
+<<<<<<< HEAD
     country: "Mexico",  
+=======
+    country: "Mexico",
+>>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
   },
   {
     title: "Rustic Cabin by the Lake",
