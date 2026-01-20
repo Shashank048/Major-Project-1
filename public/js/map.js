@@ -17,8 +17,5 @@ const marker = new mapboxgl.Marker({color:"red"})
       `<h5>${listing.title}</h5><p>Exact location will be provided after booking</p>`
     )
   )
-<<<<<<< HEAD
+
   .addTo(map);
-=======
-  .addTo(map);
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
