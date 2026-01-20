@@ -1,0 +1,191 @@
+<!-- <!-- <h3>Complete Payment</h3>
+
+<p><b>Amount:</b> ₹<%= amount %></p>
+
+<form action="/payment/confirm" method="POST">
+  <input type="hidden" name="listingId" value="<%= listingId %>">
+  <input type="hidden" name="amount" value="<%= amount %>">
+
+  <div>
+    <label>
+      <input type="radio" name="method" value="UPI" required> UPI
+    </label>
+    <label>
+      <input type="radio" name="method" value="Card"> Card
+    </label>
+    <label>
+      <input type="radio" name="method" value="Wallet"> Wallet
+    </label>
+  </div>
+
+  <button class="btn btn-primary mt-3">
+    Confirm Payment
+  </button>
+</form>
+
+<script>
+  document.querySelector("form").addEventListener("submit", () => {
+    alert("Processing payment...");
+  });
+</script> -->
+<!-- 
+<h3>Complete Payment</h3>
+
+<p><b>Amount:</b> ₹<%= amount %></p>
+
+<form action="/payment/confirm" method="POST">
+  <input type="hidden" name="listingId" value="<%= listingId %>">
+  <input type="hidden" name="amount" value="<%= amount %>">
+
+  <div>
+    <label>
+      <input type="radio" name="method" value="UPI" required> UPI
+    </label>
+    <label>
+      <input type="radio" name="method" value="Card"> Card
+    </label>
+    <label>
+      <input type="radio" name="method" value="Wallet"> Wallet
+    </label>
+  </div>
+
+  <button class="btn btn-primary mt-3">
+    Confirm Payment
+  </button>
+</form>
+
+<p id="paymentStatus" style="display:none; color: green; margin-top: 10px;">
+  Processing payment...
+</p>
+
+<script>
+  document.querySelector("form").addEventListener("submit", () => {
+    document.getElementById("paymentStatus").style.display = "block";
+  });
+</script> -->
+
+
+
+
+
+
+<% layout("/layouts/boilerplate") %>
+
+<style>
+  .payment-wrapper {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .payment-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .payment-card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .amount-box {
+    background: #f7f7f7;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .payment-method {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .payment-method input {
+    margin-right: 10px;
+  }
+
+  .payment-method:hover {
+    border-color: #ff385c;
+    background: #fff5f7;
+  }
+
+  .pay-btn {
+    width: 100%;
+    background: #ff385c;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+
+  .pay-btn:hover {
+    background: #e03150;
+  }
+
+  .secure-text {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+  }
+</style>
+
+<br/>
+<br/>
+
+<div class="payment-wrapper">
+  <div class="payment-card">
+    <h3>Complete Payment</h3>
+
+    <div class="amount-box">
+      Amount Payable: ₹<%= amount %>
+    </div>
+
+    <form action="/payment/confirm" method="POST">
+      <input type="hidden" name="listingId" value="<%= listingId %>">
+      <input type="hidden" name="amount" value="<%= amount %>">
+
+      <label class="payment-method">
+        <input type="radio" name="method" value="UPI" required>
+        📱 UPI (Google Pay / PhonePe)
+      </label>
+
+      <label class="payment-method">
+        <input type="radio" name="method" value="Card">
+        💳 Credit / Debit Card
+      </label>
+
+      <label class="payment-method">
+        <input type="radio" name="method" value="Wallet">
+        👛 Wallet
+      </label>
+
+      <button class="pay-btn">
+        Pay ₹<%= amount %>
+      </button>
+    </form>
+
+    <p class="secure-text">
+      🔒 This is a secure demo payment (No real money involved)
+    </p>
+  </div>
+</div>
+<br/>
+<br/>
