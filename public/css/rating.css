@@ -193,8 +193,5 @@
 .starability-slot > input:focus ~ label {
   -webkit-transition: background-position .7s;
   transition: background-position .7s;
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> acffb59ae94b358b69f7836a0da8fc00fd105db9
